@@ -111,4 +111,24 @@
             </plugin>
         </plugins>
     </build>
+    <distributionManagement>
+        <repository>
+            <id>synegen</id>
+            <name>Internal Releases</name>
+            <url>http://developers.synegen.com/nexus/content/repositories/releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>synegen</id>
+            <name>Internal Snapshots</name>
+            <url>http://developers.synegen.com/nexus/content/repositories/snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
+    <repositories>
+        <repository>
+            <id>synegen</id>
+            <name>Synegen Repository</name>
+            <url>http://developers.synegen.com/nexus/content/groups/public/</url>
+        </repository>
+    </repositories>
 </project>

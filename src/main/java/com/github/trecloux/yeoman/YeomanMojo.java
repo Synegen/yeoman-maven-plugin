@@ -81,12 +81,13 @@ public class YeomanMojo extends AbstractMojo {
 
     void logCommand(String command) {
         getLog().info("--------------------------------------");
-        getLog().info("         " + command.toUpperCase());
+        getLog().info("         " + command);
         getLog().info("--------------------------------------");
     }
 
     void executeCommand(String command) throws MojoExecutionException {
         try {
+            getLog().info("Working Directory: " + yeomanProjectDirectory);
             if (isWindows()) {
                 command = "cmd /c " + command;
             }
